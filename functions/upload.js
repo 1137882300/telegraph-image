@@ -9,6 +9,8 @@ export async function onRequestPost(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
+     console.log(url)
+     //实际请求：https://telegra.ph/upload 上传文件
      const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
          method: request.method,
          headers: request.headers,

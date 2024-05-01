@@ -68,6 +68,7 @@ async function errorHandling(context) {
   
   
   function authentication(context) {
+    console.log("我来了")
     //context.env.BASIC_USER="admin"
     //context.env.BASIC_PASS="admin"
     //check if the env variables Disable_Dashboard are set

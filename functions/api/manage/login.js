@@ -10,6 +10,7 @@ export async function onRequest(context) {
     } = context;
     //get the request url
     const url = new URL(request.url);
+    console.log(request)
     //redirect to admin page
     return Response.redirect(url.origin+"/admin.html", 302)
 
