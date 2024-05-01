@@ -245,6 +245,7 @@
             fetch("./api/manage/check", requestOptions)
                 .then(response => response.text())
                 .then(result => {
+                    console.log("admin.html-./api/manage/check");
                     console.log(result);
                     if (result == "true") {
                         this.showLogoutButton = true;
@@ -289,6 +290,7 @@
                 .then(response => response.text())
                 .then(result => {
                     this.tableData = JSON.parse(result);
+                    console.log("admin.html-./api/manage/list");
                     console.log(result);
                     this.Number = this.tableData.length
                 })

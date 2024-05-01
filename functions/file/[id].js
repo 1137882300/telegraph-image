@@ -9,8 +9,8 @@ export async function onRequest(context) {  // Contents of context object
     } = context;
     context.request
     const url = new URL(request.url);
-    console.log("([id].js:打印-url)：" + url)
-    console.log("([id].js:打印-params)：" + params)
+    console.log("([id].js:打印-url)：" + url.toString())
+    console.log("([id].js:打印-params)：" + JSON.stringify(params))
     //这个[id].js 文件就是一个公共的组件，id是参数，占位符，比如一个请求：https://img2.funning.top/file/af1a01077f0b08a480ea7.jpg，file就是文件目录,id就是af1a01077f0b08a480ea7.jpg
     const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
         method: request.method, headers: request.headers, body: request.body,
